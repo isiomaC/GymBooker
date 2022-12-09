@@ -1,0 +1,36 @@
+
+
+- Download chrome driver from version that matches your browser from (N.B . you can verify your architecture by running "uname -m" in your terminal )
+** https://chromedriver.storage.googleapis.com/index.html
+
+Navigate to terminal
+- echo $PATH - to view current path variable
+
+Depending on your shell(bash or zsh)
+- bash -- echo 'export PATH=$PATH:/path/to/driver' >> $HOME/.bash_profile
+- zsh -- echo 'export PATH=$PATH:/path/to/driver' >> $HOME/.zprofile
+
+if you're using bash run
+- source ~/.bash_profile
+
+if you're using zsh
+- source ~/.zshrc
+
+
+
+Run test locally with test script from package.json
+- run test script 
+
+Running Test with Docker
+- Using standalone build
+- Tests are run on docker - https://hub.docker.com/r/selenium/standalone-chrome/
+--- docker run -d -p 4444:4444 selenium/standalone-chrome:latest
+
+
+- Using custom build for docker
+--- https://github.com/SeleniumHQ/docker-selenium/wiki/Building-your-own-images#specify-chromedriver-and-chrome-versions
+
+
+
+informative 
+- https://stackoverflow.com/questions/40288651/how-to-use-selenium-chromedriver-without-being-forced-to-update
